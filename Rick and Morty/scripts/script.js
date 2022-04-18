@@ -4,9 +4,7 @@ function buildRoot(){
     '<div id="tittle"><h1 id="tittle-api">Rick and Morty API</h1></div>'+
     '<div id=conten>'+
         '<div id="sidebar">'+
-            '<div id="episodes">'+
-                '<div>hola</div>'+
-            '</div>'+
+            '<div id="episodes"></div>'+
             '<button id="loadMore">Load More</button>'+
         '</div>'+
         '<div id="main"></div>'
@@ -21,9 +19,8 @@ function loadEpisodes(){
 
 function showEpisode(element){
     const result = element.results
-    console.log(result);
     result.forEach(obj => {
-        console.log(obj.name);
+        document.getElementById('episodes').appendChild(document.createElement('div')).textContent = obj.name
     });
 }
 
