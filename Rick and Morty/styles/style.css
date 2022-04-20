@@ -48,6 +48,7 @@ table {
     background-color: aqua;
     margin: 0;
     padding: 20px;
+	text-align: center;
 }
 
 #sidebar {
@@ -56,8 +57,34 @@ table {
 	float: left;
 }
 #main{
-	background-color: red;
-	height: 300px;
-	width: 300px;
-	float: right;
+	background-color: rgb(245, 103, 103);
+	height: 100%;
+	width: 100%;
+	margin-left: 240px;
+}
+
+.episodesLinks{
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+
+}
+.episodesLinks:hover{
+	background-color: black;
+	color: white;
+}
+
+.titleEpisode, .subTitleEpisode{
+	padding-left: 30px;
+}
+
+.titleEpisode{
+	font-size: 30px;
+}
+
+#boxCharacter{
+	display: flex;
+	height: 100px;
+	width: 100px;
+	background-color: black;
 }

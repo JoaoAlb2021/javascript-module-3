@@ -17,15 +17,46 @@ function loadEpisodes(){
         .then(episodes => showEpisode(episodes))
 }
 
+
+// function loadContent (){
+//     fetch("https://rickandmortyapi.com/api/character/2")
+//     .then(res => res.json())
+//     .then(img => showContent(img))
+//     .catch(console.log('error'))
+// }
+
+
 function showEpisode(element){
-    const result = element.results
-    result.forEach(obj => {
-        document.getElementById('episodes').appendChild(document.createElement('div')).textContent = obj.name
-    });
+    element.results
+    .forEach(obj => createEpisodeLink(obj))
+}
+
+function createEpisodeLink(element){
+    const episodes = document.createElement('div')
+    document.getElementById('episodes').appendChild(episodes)
+    episodes.innerText = element.name
+    episodes.classList.add('episodesLinks')
+    episodes.addEventListener("click", () => showContentTitle(element))
+    episodes.addEventListener("click", saludo)
+    return episodes
+}
+    
+function showContentTitle(element){
+    console.log(element.name);
+    const main = document.getElementById('main')
+
+    main.innerHTML=
+    '<h1 class=titleEpisode>' + element.name + '</h1>'+
+    '<h2 class=subTitleEpisode>' + element.episode + ' | ' + element.air_date+'</h2>'+
+    ('<div id=boxCharacter>hola</div>')
+}
+function saludo(){
+    console.log('hola');
 }
 
 
 
 
-loadEpisodes()
 buildRoot()
+loadEpisodes()
+// loadContent()
