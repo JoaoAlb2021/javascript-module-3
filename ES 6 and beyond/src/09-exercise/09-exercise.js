@@ -17,7 +17,8 @@ function exercise09() {
         ["Thursday"],
         ["Friday"],
     ];
+    return days.flat()
 }
-
+console.log(exercise09());
 // Don’t change the code bellow this line
-export default exercise09;
+// export default exercise09;
