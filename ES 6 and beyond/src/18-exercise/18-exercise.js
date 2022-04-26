@@ -19,7 +19,11 @@
  */
 
 // Finish the code of the function
-function exercise18() {}
+async function exercise18() {
+    let fetchPromise = await fetch('https://jsonplaceholder.typicode.com/users/1')
+    let body = await fetchPromise.json()
+    displayContents(body)
+}
 
 // Don’t change the code bellow this line
 function displayContents(data) {
