@@ -3,6 +3,8 @@
  */
 describe("02-exercises", () => {
   test("the variable `hello` is the same as 'hello-world'", () => {
+    expect.assertions(1);
+
     const hello = "hello-world";
 
     expect(hello).toBe('hello-world');
@@ -10,13 +12,17 @@ describe("02-exercises", () => {
     // Finish the test
   });
   test("the variable `hello` is not the same as 'hola-mundo'", () => {
-    const hello = 'hola-mundo'==="hello-world";
+    expect.assertions(1);
 
-    expect(hello).toBe(false);
+    const hello = "hello-world";
+
+    expect(hello).not.toBe('hola-mundo');
 
     // Finish the test
   });
   test("user1 is the same as user2", () => {
+    expect.assertions(1);
+
     const user1 = { name: "ana", phone: 678876567 };
     const user2 = user1;
     
@@ -25,6 +31,8 @@ describe("02-exercises", () => {
     // Finish the test
   });
   test("user1 is not the same as user3", () => {
+    expect.assertions(1);
+    
     const user1 = { name: "ana", phone: 678876567 };
     const user3 = { name: "ana", phone: 678876567 };
     
