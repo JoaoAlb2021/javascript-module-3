@@ -51,11 +51,12 @@ class Person {
 }
 
 // Create the Employee class that extends the Person class
-class Person extends Employee{
-    constructor(firstName, jobTitle){
+class Employee extends Person{
+    constructor(firstName, lastName, jobTitle){
+        super(firstName, lastName)
         this.jobTitle = jobTitle
     }
-    sayName() {return firstName + ' ' + this.lastName}
+    sayName() {return this.firstName + ' ' + this.lastName} 
 }
 
 // Create a new instance of the `Employee` class with the arguments:
